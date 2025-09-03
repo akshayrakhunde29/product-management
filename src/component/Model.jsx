@@ -24,12 +24,10 @@ const ModelBox = ({
               <input
                 type="text"
                 value={formData.name}
-                onChange={(e) =>
-                  setFormData(
-                    { ...formData, name: e.target.value },
-                    setFormErrors({})
-                  )
-                }
+                onChange={(e) => {
+                  setFormData({ ...formData, name: e.target.value });
+                  setFormErrors({});
+                }}
                 className={`w-full bg-white text-black px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                   formErrors.name ? "border-red-500" : "border-gray-300"
                 }`}
@@ -51,9 +49,10 @@ const ModelBox = ({
                 min="0"
                 step="0.01"
                 value={formData.price}
-                onChange={(e) =>
-                  setFormData({ ...formData, price: e.target.value })
-                }
+                onChange={(e) => {
+                  setFormData({ ...formData, price: e.target.value });
+                  setFormErrors({});
+                }}
                 className={`w-full bg-white text-black px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                   formErrors.price ? "border-red-500" : "border-gray-300"
                 }`}
@@ -72,9 +71,10 @@ const ModelBox = ({
               </label>
               <select
                 value={formData.category}
-                onChange={(e) =>
-                  setFormData({ ...formData, category: e.target.value })
-                }
+                onChange={(e) => {
+                  setFormData({ ...formData, category: e.target.value });
+                  setFormErrors({});
+                }}
                 className={`w-full bg-white text-black px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                   formErrors.category ? "border-red-500" : "border-gray-300"
                 }`}

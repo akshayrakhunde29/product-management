@@ -7,7 +7,7 @@ import ListView from "./component/ListView.jsx";
 import ModelBox from "./component/Model.jsx";
 import Pagination from "./component/Pagination.jsx";
 
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = 12;
 
 const App = () => {
   const [products, setProducts] = useState(initialProducts);

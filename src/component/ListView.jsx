@@ -6,24 +6,18 @@ const ListView = ({ paginatedProducts, toggleProductStatus, handleEdit }) => {
       <table className="w-full">
         <thead className="bg-gray-50">
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              Product
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              Category
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              Price
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              Stock
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              Status
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              Actions
-            </th>
+            {["Product", "Category", "Price", "Stock", "Status", "Actions"].map(
+              (_, index) => {
+                return (
+                  <th
+                    key={index}
+                    className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider"
+                  >
+                    {_}
+                  </th>
+                );
+              }
+            )}
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
