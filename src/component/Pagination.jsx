@@ -12,14 +12,14 @@ const Pagination = ({
 }) => {
   return (
     <div className="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
-      <div className="flex-1 flex items-center justify-between">
-        <div className="text-sm text-gray-700">
+      <div className="flex-1 md:flex sm:block items-center justify-between">
+        <div className="text-sm sm:mb-2 md:mb-0 text-gray-700">
           Showing {startIndex + 1} to{" "}
           {Math.min(endIndex, filteredProducts.length)} of{" "}
           {filteredProducts.length} results
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-center space-x-2">
           <button
             onClick={goToPrevious}
             disabled={currentPage === 1}
